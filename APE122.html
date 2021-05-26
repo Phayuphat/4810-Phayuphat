@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> APE 122</title>
+    <center><h1>APE 122</h1></center>
+    <hr width = "50%" size = "3">
+    <style>
+    <title>METARzz</title>
+    <script>
+        function SPEEDRATE() {
+            let D = parseFloat(document.getElementById("D").value);
+            let n = parseFloat(document.getElementById("n").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("SPEEDRATE").value = Vc.toFixed(3);
+        }
+    </script>
+    <script>
+        function FEEDRATE() {
+            let fz = parseFloat(document.getElementById("FEED PER TOOTH").value);
+            let Zn = parseFloat(document.getElementById("NUMBER OF TEETH").value);
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let Vf = (fz * Zn *n1);
+            document.getElementById("FEED RATE").value = Vf.toFixed(3);
+        }
+    </script>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .Calculator{
+            width: 350px;
+            height: 350px;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: rgb(109, 107, 218);
+            padding: 15px;
+            margin: 20px;
+            font-family:sans-serif;
+        }
+        .Calculator h1{
+            text-align: center;
+        }
+        .Calculator input{
+            background-color: rgb(133, 62, 133);
+            height: 20px;
+        }
+        .Calculator button{
+            background-color: rgb(47, 167, 47);
+            padding: 13px;
+        }
+        h1{
+            font-size: 20px;
+            text-align: center;
+        }
+        body{
+            background-color: rgb(135, 205, 222);
+        }
+        .img{
+            border-radius: 20px;
+            border: 5px solid rgb(126, 17, 17);
+        }
+        input{
+            margin: 10px;
+        }
+    </style>    
+</head>
+<body>
+  <div class="container">
+    <!-- SPEED RATE -->
+    <div class="Calculator">
+        <h1>SPEED RATE</h1>
+        <label for="" style="margin-left: 20px;">ความเร็วรอบ (n)</label>
+        <br>
+        <input type="text" name="" id="n" size=""> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">เส้นผ่าศูนย์กลางงาน (D)</label>
+        <br>
+        <input type="text" name="" id="D" size=""> (mm)
+        <br>
+        <label for="" style="margin-left: 20px;">SPEED RATE (Vc)</label>
+        <br>
+        <input type="text" name="" id="SPEEDRATE" size=""> (m/min)
+        <br>
+        <button onclick="SPEEDRATE()">Enter</button>
+    </div>
+    <!-- FEED RATE -->
+    <div class="Calculator">
+        <h1>FEED RATE</h1>
+        <label for="" style="margin-left: 20px;">FEED PER TOOTH (fz)</label>
+        <br>
+        <input type="text" name="" id="FEED PER TOOTH" size=""> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 20px;">จำนวนฟันตัด (Zn)</label>
+        <br>
+        <input type="text" name="" id="NUMBER OF TEETH" size="">
+        <br>
+        <label for="" style="margin-left: 20px;">ความเร็วรอบ (n)</label>
+        <br>
+        <input type="text" name="" id="n1" size=""> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">FEED RATE (Vf)</label>
+        <br>
+        <input type="text" name="" id="FEED RATE" size=""> (mm/min)
+        <br>
+        <button class="botton2" onclick="FEEDRATE()">Enter</button>
+    </div>
+  </div>
+  <div class="container">
+    <img class="img" src="https://kapus.ru/assets/zeimg-le.jpg" alt="">
+  </div>
+  <body bgcolor="#E0FFFF">
+    <h1><center>กระบวนการผลิต Stud </center></h1>
+    <table border="3" width=100% bordercolor="#000080">
+        <thead>
+            <tr>
+                <th colspan="4">Past Number : 001</th>
+                <th colspan="4">Material : carbon steel</th>
+                <th colspan="4">ผู้รับผิดชอบ : นายพายุพัฒน์ พินิจ</th>
+            </tr>
+            <tr>
+                <th colspan="4">Past Name : Stud</th>
+                <th colspan="4">จำนวนการผลิต : 1 ชิ้น</th>
+                <th colspan="4">วันที่เริ่มผลิต : 15 ก.พ.2564</th>
+            </tr>
+            <tr>
+                <th colspan="1">ขั้นตอน</th>
+                <th colspan="4">คำอธิบาย</th>
+                <th colspan="1">เครื่องจักร</th>
+                <th colspan="2">เครื่องมือตัด</th>
+                <th colspan="1">เครื่องมือพิเศษ</th>
+                <th colspan="3">การติดตั้ง</th>
+            </tr>
+            <tr>
+                <th colspan="1">1</th>
+                <th colspan="4">ปาดหน้าเพลาทั้งสองด้านโดยให้เพลามีความยาว 100mm</th>
+                <th colspan="1">เครื่องกลึง</th>
+                <th colspan="2">มีดกลึงปาด</th>
+                <th colspan="1">Vernier caliper</th>
+                <th colspan="3">ติดตั้งเพลากับเครื่องกลึง
+                    <br>ติดตั้งมีดกลึงปาดกับป้อมมีด
+                </th>
+            </tr>
+            <tr>
+                <th colspan="1">2</th>
+                <th colspan="4">เจาะรูยันศูนย์ไว้ที่ชิ้นงานด้าน A</th>
+                <th colspan="1">เครื่องกลึง</th>
+                <th colspan="2">ดอกเจาะนำศูนย์</th>
+                <th colspan="1">หัวจับดอกสว่าน</th>
+                <th colspan="3">ติดตั้งเพลากับเครื่องกลึง
+                    <br>ติดตั้งดอกเจาะนำศูนย์กับหัวจับดอกสว่าน
+                </th>
+            </tr>
+            <tr>
+                <th colspan="1">3</th>
+                <th colspan="4">เซาะร่องให้เพลามีขนาด  Ø 9.5  mm 
+                    <br>กว้าง 4 mm 2ร่อง
+                    <br>โดยร่องที่ 1 ห่างจากด้าน A 40 mm
+                    <br>ร่องที่ 2 ห่างจากด้าน B 14 mm
+                    </th>
+                <th colspan="1">เครื่องกลึง</th>
+                <th colspan="2">มีดกลึงเซาะร่อง</th>
+                <th colspan="1">Vernier caliper</th>
+                <th colspan="3">ติดตั้งเพลากับเครื่องกลึง
+                    <br>ติดตั้งมีดกลึงเซาะร่องกับป้อมมีด
+                </th>
+            </tr>
+            <tr><th colspan="1">4</th>
+                <th colspan="4">กลึงปลอกเพลาจากด้าน A จนถึง ร่องเซาะที่ 1
+                    <br>ให้มีขนาด Ø11.8 mm
+                </th>
+                <th colspan="1">เครื่องกลึง</th>
+                <th colspan="2">มีดกลึงปลอก</th>
+                <th colspan="1">Vernier caliper</th>
+                <th colspan="3">ติดตั้งเพลากับเครื่องกลึง
+                    <br>ติดตั้งมีดกลึงปอกกับป้อมมีด
+                </th>
+            </tr>
+            <tr>
+                <th colspan="1">5</th>
+                <th colspan="4">กลึงปลอกเพลาจากด้าน B จนถึง ร่องเซาะที่ 2
+                    ให้มีขนาด Ø11.8 mm
+                </th>
+                <th colspan="1">เครื่องกลึง</th>
+                <th colspan="2">มีดกลึงปลอก</th>
+                <th colspan="1">Vernier caliper</th>
+                <th colspan="3">ติดตั้งเพลากับเครื่องกลึง
+                    <br>ติดตั้งมีดกลึงปอกกับป้อมมีด
+                </th>
+            </tr>
+            <tr>
+                <th colspan="1">6</th>
+                <th colspan="4">ลบคมที่ปลายของเพลา</th>
+                <th colspan="1">เครื่องกลึง</th>
+                <th colspan="2">มีดกลึงปลอก</th>
+                <th colspan="1">-</th>
+                <th colspan="3">ติดตั้งเพลากับเครื่องกลึง
+                    <br>ติดตั้งมีดกลึงปอกกับป้อมมีด
+                </th>
+            </tr>
+            <tr>
+                <th colspan="1">7</th>
+                <th colspan="4">กลึงเกลียวด้าน B ถึงร่องเซาะที่ 2 
+                    <br>ขนาด M12 x 1.75 mm 
+                </th>
+                <th colspan="1">เครื่องกลึง</th>
+                <th colspan="2">มีดกลึงเกลียว</th>
+                <th colspan="1">ยันศูนย์เป็น</th>
+                <th colspan="3">ติดตั้งเพลากับเครื่องกลึง
+                    <br>ติดตั้งมีดกลึงเกลียวกับป้อมมีด
+                </th>
+            </tr>
+            <tr>
+                <th colspan="1">8</th>
+                <th colspan="4">ดายเกลียวด้าน A ถึงร่องเซาะ ที่ 1
+                    <br>ขนาด M12 x 1.75 mm
+                </th>
+                <th colspan="1">-</th>
+                <th colspan="2">ตัวดายเกลียว<br>ขนาด M12 x<br>1.75 mm</th>
+                <th colspan="1">ปากกาจับชิ้นงาน</th>
+                <th colspan="3">-</th>
+            </tr>
+            <tr>
+                <th colspan="1">9</th>
+                <th colspan="4">ตะไบตรงกลาง Stud เพื่อไว้ตอกรหัส นศ.</th>
+                <th colspan="1">-</th>
+                <th colspan="2">ตะไบละเอียด</th>
+                <th colspan="1">-</th>
+                <th colspan="3">-</th>
+            </tr>
+            <tr><th colspan="1">10</th>
+                <th colspan="4">ตอกรหัส นศ. บน stud</th>
+                <th colspan="1">-</th>
+                <th colspan="2">-</th>
+                <th colspan="1">ค้อน <br> แบบตัวเลข</th>
+                <th colspan="3">-</th>
+            </tr>
+            <tr>
+                <th colspan="1">11</th>
+                <th colspan="4">รมดำชิ้นงาน</th>
+                <th colspan="1">-</th>
+                <th colspan="2">-</th>
+                <th colspan="1">น้ำยารมดำ</th>
+                <th colspan="3">-</th>
+            </tr>
+            <tr>
+</body>
+</html>
+
+       
